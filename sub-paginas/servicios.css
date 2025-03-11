@@ -1,40 +1,60 @@
-/* Pagina principal */
-* {
-    margin: 0;
-}
-
-body {
-    background-color: rgb(225, 176, 120);
-    font-family: Consolas, monospace;   
-}
-
-/* Titulo de la pagina */
-#titulo {
-    background-color: rgba(206, 105, 33, 0.4);
-    height: fit-content;
+/* Servicio a dar */
+section {
     margin: 20px;
+    height: fit-content;
 
-    text-align: center;
-    font-size: 50px;
-    line-height: 80px;
-
-    border-radius: 75px;
-    border-bottom: 10px solid rgba(172, 101, 8, 0.772);
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
+    margin-bottom: 100px;
 }
 
-/* Pie de pagina */
-.clearfix {
-    clear: both;
-}
- 
-footer {
-    background: black;
-    color: white;
-    height: 50px;
-    line-height: 50px;
-
+.subtitulo {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
+
+    background-color: rgba(206, 105, 33, 0.4);
+    border: 3px solid rgba(206, 105, 33, 0.8);
+    border-radius: 30px;
+
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+/* Contenido del servicio */
+article {
+    display: flex;
+    flex-direction: wrap;
+    
+    height: fit-content;
+
+    align-items: center;
+    justify-content: center;
+}
+
+article > * {
+    margin: 20px;
+}
+
+img {
+    height: 400px;
+    border: 5px solid black;
+    border-radius: 30px;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+li {
+    font-size: 20px;
+}
+
+.link-aleatorio {
+    font-size: 20px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

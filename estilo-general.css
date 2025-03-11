@@ -68,6 +68,13 @@ a:active {
     color: green;
 }
 
+.doble-link {
+    display: flex;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Pie de pagina */
 .clearfix {
     clear: both;

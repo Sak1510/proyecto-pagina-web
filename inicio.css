@@ -107,10 +107,12 @@ article {
    align-items: center;
    justify-content: center;
 
-   height: 300px;
+   height: fit-content;
    margin-top: 20px;
    margin-right: 40px;
 }
+
+
 
 .left > * {
    margin: 10px;
@@ -131,6 +133,7 @@ img {
    align-items: center;
    justify-content: center;
 
+   height: fit-content;
    padding-top: 20px;
    margin-left: 40px;
 }
@@ -145,7 +148,7 @@ img {
    align-items: center;
    justify-content: center;
 
-   height: 400px;
+   height: fit-content;
    margin-top: 20px;
    margin-right: 40px;
 }
