@@ -6,6 +6,93 @@
         <link rel="stylesheet" href="libro_aleatorio.css">
         <link rel="stylesheet" href="/proyecto-pagina-web/estilo-general.css">
         <link rel="icon" type="image/x-icon" href="https://www.shutterstock.com/shutterstock/photos/2524606523/display_1500/stock-vector-book-icon-thin-line-book-icon-vector-illustration-2524606523.jpg">
+        <script>
+            //Links
+            const categoriasLinks = [
+                "aviacion/", 
+                "ciencias/", 
+                "filosofia/", 
+                "infantiles/", 
+                "literatura_clasica/", 
+                "novelas/", 
+                "psicologia/"
+            ];
+
+            const links = [
+                "fighter_pilot.html", "skunk_works.html", "viper_pilot.html",
+                "biologia.html", "matematicas.html", "quimica.html",
+                "sapiens_hombre.html", "sociedad_del_cansancio.html", "zaratustra.html",
+                "manual_brujas.html", "primera_estrella.html", "rey_equivocado.html",
+                "don_quijote.html", "eneida.html", "mosqueteros.html",
+                "biblioteca_medianoche.html", "boulevard.html", "la_seleccion.html",
+                "psicologia_positiva.html", "psicologicamente_hablando.html", "psicotrolas.html"
+            ];
+
+            const imgLinks = [
+                "https://m.media-amazon.com/images/I/71DHFsp1-aL._SY466_.jpg", "https://m.media-amazon.com/images/I/81nzweM-6sL._SY466_.jpg", "https://m.media-amazon.com/images/I/61kJYVAwtxL._SY466_.jpg",
+                "https://m.media-amazon.com/images/I/41XjmOfbT5L._SX342_SY445_.jpg", "https://udocz-images.b-cdn.net/documents_html/10591-eaa5dd99acaad30d1f4e0f13244e814b/bg1.jpg?width=1024", "https://www.editorialbruno.com.pe/bstore/984-large_default/mc-graw-hill-quimica-conceptos-y-aplicaciones.jpg",
+                "https://www.infobae.com/resizer/v2/JW6G5CJCFNCTPL3MXI35EOH37E.jpg?auth=94e313f5081d4aebbe38dbdfc2138a81762f91ac352b027fe990b8fb9e6df04c&smart=true&width=1200&height=1600&quality=85", "https://www.infobae.com/resizer/v2/2RKO2WP6YNG6VF2622SGCZC6H4.jpg?auth=17560236f202183feabceb254bbd854f5ff11e7c65b91ff22ff1f673c490783d&smart=true&width=1200&height=1600&quality=85", "https://www.infobae.com/resizer/v2/HPQ2EPWALFAGLAVTKHOST6Q5BA.jpg?auth=79e8dca39f441b374a4d78074920dc37fdf8c729f01b75899930db4abb5b5d2f&smart=true&width=1200&height=1600&quality=85",
+                "https://m.media-amazon.com/images/I/91BI-kbPBDL._SY385_.jpg", "https://m.media-amazon.com/images/I/81--s1QILSL._SY385_.jpg", "https://m.media-amazon.com/images/I/41sqv6xpE8L._SY445_SX342_.jpg",
+                "https://marieclaire.com.mx/wp-content/uploads/2024/10/Don-Quijote-de-la-Mancha.jpg", "https://marieclaire.com.mx/wp-content/uploads/2024/10/Eneida.jpg", "https://images.cdn3.buscalibre.com/fit-in/360x360/4a/51/4a517246c750cce4318354451a62e407.jpg",
+                "https://m.media-amazon.com/images/I/71i1sYvI17L._SY466_.jpg", "https://www.penguinlibros.com/mx/2299243-large_default/boulevard-libro-1.webp", "https://m.media-amazon.com/images/I/61vdjZGEVNL._SY445_SX342_.jpg",
+                "https://m.media-amazon.com/images/I/41dqLObEd1L._SY445_SX342_.jpg", "https://pymstatic.com/19874/conversions/psicologicamente-hablando-default_webp.webp", "https://pymstatic.com/141223/conversions/psicotrolas-default_webp.webp"
+            ];
+
+            //Texto 
+            const categorias = [
+                "Aviación Militar Estadounidense",
+                "Ciencias",
+                "Filosofía",
+                "Infantiles",
+                "Literatura Clasica",
+                "Novelas",
+                "Psicología"
+            ];
+
+            const tituloLibros = [
+            	"Fighter Pilot: The Memoirs of Legendary Ace Robin Olds", "Skunk Works: A Personal Memoir of My Years of Lockheed", "Viper Pilot: A Memoir of Air Combat",
+                "Biología", "Calculo Diferencial e Integral Serie Schaum", "Química",
+                "Sapiens. De animales a dioses", "La Sociedad Del Cansancio", "Así Habló Zaratustra",
+                "Manual de Brujas", "La Primera Estrella", "El Rey Que Se Equivoco De Cuento",
+                "Don Quijote de la mancha", "Virgilio. La Eneida", "Los Tres Mosqueteros",
+                "La biblioteca de la media noche", "Boulevard. Edición Ilustrada", "La Selección",
+                "Psicología positiva", "Psicologicamente hablando", "Psicotrolas: Las mentiras psicológicas de nuestro mundo digital"
+            ];
+
+            //Funciones
+            //Genera el link a partir de dos valores
+            function generarLink(categoria, libro) {
+                return "/proyecto-pagina-web/sub-paginas/libros_categorias/" +categoriasLinks[categoria] +"libro-" +links[3 *categoria +libro];
+            }
+
+            function generarTitulo(categoria, libro) {
+                return tituloLibros[3 *categoria +libro];
+            }
+
+            function generarCategoria(categoria) {
+                return categorias[categoria];
+            }
+
+            //Genera la categoria
+            function generarPorCategoria(categoria) {
+                let numAleatorio = Math.floor(Math.random() *3);
+
+                document.getElementById('prueba').href = generarLink(categoria, numAleatorio);
+                document.getElementById('titulo-libro').innerHTML = "Titulo: " +generarTitulo(categoria, numAleatorio);
+                document.getElementById('categoria-libro').innerHTML = "Categoria:" +categorias[categoria];
+                document.getElementById('portada').src = imgLinks[3 *categoria +numAleatorio];
+            }
+
+            //Generar completamente aleatorio
+            function generarAleatoriamente() {
+                let categoriaAleatoria = Math.floor(Math.random() *6), numAleatorio = Math.floor(Math.random() *3);
+
+                document.getElementById('prueba').href = generarLink(categoriaAleatoria, numAleatorio);
+                document.getElementById('categoria-libro').innerHTML = "Categoria: " +categorias[categoriaAleatoria];
+                document.getElementById('titulo-libro').innerHTML = "Titulo: " +generarTitulo(categoriaAleatoria, numAleatorio);
+                document.getElementById('portada').src = imgLinks[3 *categoriaAleatoria +numAleatorio];
+            }
+        </script>
     </head>
     <body>
         <!-- Cabezera de página -->
@@ -15,7 +102,42 @@
 
         <!-- Contenido de la página web -->
         <main>
+            <p class="descripcion">Descripción sobre "Como Usar"</p>
+            <h2 class="subtitulo">Por categoria</h2>
+            <div class="por-categoria">
+                <button onclick="generarPorCategoria(0)">Aviación Militar Estadounidense</button>
+                <button onclick="generarPorCategoria(1)">Ciencias</button>
+                <button onclick="generarPorCategoria(2)">Filosofía</button>
+                <button onclick="generarPorCategoria(3)">Infantiles</button>
+                <button onclick="generarPorCategoria(4)">Literatura Clasica</button>
+                <button onclick="generarPorCategoria(5)">Novelas</button>
+                <button onclick="generarPorCategoria(6)">Psicología</button>
+            </div>
+
+            <h2 class="subtitulo">Totalmente Aleatorio</h2>
+            <button class="alet-button" onclick="generarAleatoriamente()">¡Escojer libro totalmente aleatorio!</button>
             
+            <h2 class="subtitulo">Libro aleatorio</h2>
+            <div class="libro">
+                <img id="portada" src="https://images.vexels.com/media/users/3/271649/isolated/preview/3a1938ea55f27c31d53b585fcebdcd5e-icono-de-dibujos-animados-de-libro-abierto.png" alt="Imagen del libro">
+                <div class="contenido">
+                    <div>
+                        <p class="info" id="categoria-libro">Categoría del Libro</p>
+                        <p class="info" id="titulo-libro">Titulo del libro</p>
+                    </div>
+                    <br><br><br><br>
+                    <div class="button">
+                        <h2 style="text-align: center;">Precio: $200.00 MXN</h2>
+                        <a href="javascript:alert('¡Libro comprado! Ahora me debes dinero y yo a ti un libro jejejeje');">
+                            <button type="button">¡Comprar libro!</button>
+                        </a>
+                        <a href="javascript:alert('Te prestaremos el libro sin problema, solo... cuidalo bien ;)');">
+                            <button type="button">Pedir prestado por una semana.</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a id="prueba" href="/proyecto-pagina-web/sub-paginas/categorias.html" target="_blank">Para más información, ¡entra al link!</a>
         </main>
 
         <!-- Pie de página -->

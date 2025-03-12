@@ -1,0 +1,95 @@
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > * {
+    margin: 20px;
+}
+
+.subtitulo {
+    margin-top: 100px;
+    width: 100% !important;
+    text-align: center;
+    font-size: 30px;
+
+    background-color: rgba(206, 105, 33, 0.4);
+    border: 3px solid rgba(206, 105, 33, 0.8);
+    border-radius: 30px;
+
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.descripcion {
+    padding: 10px;
+    width: 100%;
+}
+
+.por-categoria {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+
+    border: none;
+    font-style: italic;
+    padding: 10px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    border-radius: 15px;
+}
+
+.libro {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    height: 500px;
+}
+
+img {
+    width: 30%;
+    border: 5px solid black; 
+
+    border-radius: 35px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.contenido {
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    text-align:  center;
+    font-size: 30px;
+    width: 100%;
+    margin: 10px;
+    font-style: italic;
+}
+
+#prueba {
+    font-size: 25px;
+}
