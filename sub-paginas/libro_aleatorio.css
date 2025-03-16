@@ -83,8 +83,6 @@ button.alet-button:hover {
 }
 
 .libro {
-    border: 1px solid;
-
     width: 100%;
     height: 500px;
     margin-top: 10px;
@@ -129,11 +127,9 @@ button.accion:hover {
     margin-top: 50px;
 
     flex-direction: row;
-    border: 1px solid;
     align-items: center;
     justify-content: space-around;
 }
-
 
 
 .accion {
