@@ -102,22 +102,22 @@
 
         <!-- Contenido de la página web -->
         <main>
-            <p class="descripcion">Descripción sobre "Como Usar"</p>
+            <p class="descripcion">¡En esta página podras obtener un libro completamente aleatorio de nuestras existencias!<br><br>Escoge entre una categoria, o directamente entre todos los libros posibles, para generar así el libro que te entregará una nueva aventura. ¡A un mismo precio todos los libros! ¡No dudes en intentarlo!</p>
             <h2 class="subtitulo">Por categoria</h2>
             <div class="por-categoria">
-                <button onclick="generarPorCategoria(0)">Aviación Militar Estadounidense</button>
-                <button onclick="generarPorCategoria(1)">Ciencias</button>
-                <button onclick="generarPorCategoria(2)">Filosofía</button>
-                <button onclick="generarPorCategoria(3)">Infantiles</button>
-                <button onclick="generarPorCategoria(4)">Literatura Clasica</button>
-                <button onclick="generarPorCategoria(5)">Novelas</button>
-                <button onclick="generarPorCategoria(6)">Psicología</button>
+                <button class="selection" onclick="generarPorCategoria(0)">Aviación Militar Estadounidense</button>
+                <button class="selection" onclick="generarPorCategoria(1)">Ciencias</button>
+                <button class="selection" onclick="generarPorCategoria(2)">Filosofía</button>
+                <button class="selection" onclick="generarPorCategoria(3)">Infantiles</button>
+                <button class="selection" onclick="generarPorCategoria(4)">Literatura Clasica</button>
+                <button class="selection" onclick="generarPorCategoria(5)">Novelas</button>
+                <button class="selection" onclick="generarPorCategoria(6)">Psicología</button>
             </div>
 
-            <h2 class="subtitulo">Totalmente Aleatorio</h2>
+            <h2 class="subtitulo">¡Completamente Aleatorio!</h2>
             <button class="alet-button" onclick="generarAleatoriamente()">¡Escojer libro totalmente aleatorio!</button>
             
-            <h2 class="subtitulo">Libro aleatorio</h2>
+            <h2 class="subtitulo">Libro escogido</h2>
             <div class="libro">
                 <img id="portada" src="https://images.vexels.com/media/users/3/271649/isolated/preview/3a1938ea55f27c31d53b585fcebdcd5e-icono-de-dibujos-animados-de-libro-abierto.png" alt="Imagen del libro">
                 <div class="contenido">
@@ -126,14 +126,16 @@
                         <p class="info" id="titulo-libro">Titulo del libro</p>
                     </div>
                     <br><br><br><br>
-                    <div class="button">
-                        <h2 style="text-align: center;">Precio: $200.00 MXN</h2>
-                        <a href="javascript:alert('¡Libro comprado! Ahora me debes dinero y yo a ti un libro jejejeje');">
-                            <button type="button">¡Comprar libro!</button>
-                        </a>
-                        <a href="javascript:alert('Te prestaremos el libro sin problema, solo... cuidalo bien ;)');">
-                            <button type="button">Pedir prestado por una semana.</button>
-                        </a>
+                    <div style="width: 100%;">
+                        <h2 style="text-align: center;">Precio: $350.00 MXN</h2>
+                        <div class="button-compra">
+                            <a href="javascript:alert('¡Libro comprado! Ahora me debes dinero y yo a ti un libro jejejeje');">
+                                <button class="accion" type="button">¡Comprar libro!</button>
+                            </a>
+                            <a href="javascript:alert('Te prestaremos el libro sin problema, solo... cuidalo bien ;)');">
+                                <button class="accion" type="button">Pedir prestado por una semana.</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -27,6 +27,8 @@ main > * {
 .descripcion {
     padding: 10px;
     width: 100%;
+
+    font-size: 20px;
 }
 
 .por-categoria {
@@ -39,29 +41,55 @@ main > * {
 }
 
 button {
-    width: fit-content;
-    height: fit-content;
-
-    border: none;
+    font-size: 16px;
     font-style: italic;
-    padding: 10px;
 
+    height: 60px;
+    cursor: pointer;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    margin-top: 10px;
-    cursor: pointer;
 
     border-radius: 15px;
+    border: none;
+
+    border-bottom: 3px solid rgb(52, 52, 52);
+    border-right: 3px solid rgb(52, 52, 52);
+}
+
+button.selection:hover {
+    height: 80px;
+}
+
+button.alet-button:hover {
+    width: 35%;
+    background-color: rgb(183, 190, 254);
+}
+
+.selection {
+    transition: height ease-in-out 500ms;
+
+    width: 12%;
+    padding: 10px;
+    display: inline-block;
+    margin: 4px 2px;
+    margin-top: 10px;
+}
+
+.alet-button {
+    transition: width 500ms;
+    background-color: white;
+
+    width: 20%;
 }
 
 .libro {
+    border: 1px solid;
+
     width: 100%;
-    margin-top: 10px;
-    display: flex;
     height: 500px;
+    margin-top: 10px;
+
+    display: flex;
 }
 
 img {
@@ -88,6 +116,29 @@ img {
     width: 100%;
     margin: 10px;
     font-style: italic;
+}
+
+button.accion:hover {
+    height: 70px;
+}
+
+.button-compra {
+    width: 100%;
+
+    display: flex;
+    margin-top: 50px;
+
+    flex-direction: row;
+    border: 1px solid;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.accion {
+    transition: height 500ms;
+    width: 300px;
 }
 
 #prueba {
